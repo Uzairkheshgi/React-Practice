@@ -7,6 +7,7 @@ import Contact from './components/contact';
 import BlogDetails from './BlogDetails';
 import Create from './Create';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import NotFound from './NotFound';
 // App.js is your App component, whereas index.js is the "entry point" for your application.
 // The index.js contains the logic for rendering your App component and provides it with any necessary props (either directly, or via contexts).
 //App.js contain our app while in index.js it renders
@@ -27,6 +28,7 @@ function App() {
             <Route exact path='/contact' element={<Contact/>}></Route>
             <Route exatc path='/blogs/:id' element={<BlogDetails/>}></Route>
             <Route exact path='/create' element={<Create/>}></Route>
+            <Route path='*' element={<NotFound/>}></Route>                       {/*  '*' is used for catching all the remaining routes/urls if not listed above  and it needs to be at the bottom*/}
           </Routes>
           {/* <Home></Home> */}
           {/* <Home2></Home2> */}
